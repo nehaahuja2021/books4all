@@ -22,7 +22,8 @@ class BookController extends Controller
       $rent ->book_id=$req->book_id;
       $rent->user_id=$req->user_id;
             $rent->save();
-            return $rent;
+           
+            return response()->json(['rented_book_data' => $rent->toArray()], 201);
   }
 
 }
