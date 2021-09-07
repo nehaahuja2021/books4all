@@ -26,4 +26,13 @@ class BookController extends Controller
             return response()->json(['rented_book_data' => $rent->toArray()], 201);
   }
 
+  static function bookcount( request $req)
+  {
+    
+    $rent1= new Rent;
+    $userid=$req->user_id;
+    return $rent1::where('user_id',$userid)->count();
+  }
+
+
 }
