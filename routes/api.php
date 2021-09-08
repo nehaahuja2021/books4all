@@ -28,3 +28,4 @@ Route::post('details', [UserController::class,'details']);
 /////After user logs in/////
 Route::get('search/{key}', [BookController::class,'search']);
 Route::post('rent', [BookController::class,'rent_books']);
+Route::post('userinfo', [BookController::class,'user_info']);
