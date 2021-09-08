@@ -23,28 +23,34 @@ class BookController extends Controller
       $rent= new Rent;
       $rent ->book_id=$req->book_id;
       $rent->user_id=$req->user_id;
+      $rent->bookname=$req->bookname;
       $userid=$req->user_id;
       $no_of_books = Rent::where('user_id',$userid)->count();
       $userplan= Userplan::where('user_id',$userid)->get('plan_id');
 
-      if($no_of_books>2 && $userplan[0]->plan_id==1)
+      if($no_of_books>=2 && $userplan[0]->plan_id==1)
       //if(true)
     {
-      return response()->json(['error_message' => "cant have more than 2 books on this plan"], 201);
+      return response()->json(['error_message' => "You cannot rent more than 2 books on this plan,Upgrade it!!"], 201);
     }
     else{
             $rent->save();
             return response()->json(['rented_book_data' => $rent->toArray()], 201);
     }
-  }
+
+      }
   
-/*private function user_plan( request $req)
+public function user_info( request $req)
   {
-    $userplan=new userplan;
-    $userid=$req->user_id;
-    return $userplan::where('user_id',$userid)->get('plan_id');
     
-  }*/
+    $userid=$req->user_id;
+    $userplan= Userplan::where('user_id',$userid)->get(['plan_id','amountpaid','paymentstatus']);
+    
+    $userbookinfo= Rent::where('user_id',$userid)->get(['bookname','dateofissue']);
+    
+    return response()->json(['userplan' => $userplan->toArray(),'rentedbooksinfo'=> $userbookinfo->toArray()], 201);
+    
+  }
   
 
 }
