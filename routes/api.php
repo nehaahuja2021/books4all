@@ -28,6 +28,3 @@ Route::post('details', [UserController::class,'details']);
 /////After user logs in/////
 Route::get('search/{key}', [BookController::class,'search']);
 Route::post('rent', [BookController::class,'rent_books']);
-/*Route::post('userbookcount',[BookController::class,'bookcount']);
-Route::post('userplandetails',[BookController::class,'user_plan']);*/
-Route::post('compare',[BookController::class,'compare']);
