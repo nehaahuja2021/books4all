@@ -5,10 +5,10 @@
 
 
 * https://appbooks4all.herokuapp.com/api/register ( keys:name,email,password)
--https://appbooks4all.herokuapp.com/api/login (keys: email and password)
--https://appbooks4all.herokuapp.com/api/search/Mystery (search category-(comics/kids/mystery/fiction)
-https://appbooks4all.herokuapp.com/api/rent (keys:user_id,book_id,bookname)
-https://appbooks4all.herokuapp.com/api/userinfo ( keys:user_id) // 
+* https://appbooks4all.herokuapp.com/api/login (keys: email and password)
+* https://appbooks4all.herokuapp.com/api/search/Mystery (search category-(comics/kids/mystery/fiction)
+* https://appbooks4all.herokuapp.com/api/rent (keys:user_id,book_id,bookname)
+* https://appbooks4all.herokuapp.com/api/userinfo ( keys:user_id) // 
 userinfo API Returns: 
 {
     "userplan": [
