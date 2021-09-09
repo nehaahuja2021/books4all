@@ -29,3 +29,4 @@ Route::post('details', [UserController::class,'details']);
 Route::get('search/{key}', [BookController::class,'search']);
 Route::post('rent', [BookController::class,'rent_books']);
 Route::post('userinfo', [BookController::class,'user_info']);
+Route::post('selectplan',[BookController::class,'select_plan']);
