@@ -44,7 +44,7 @@ userinfo API Returns:
             "dateofissue": "2021-09-08 14:11:05"
         }
     ]
-- 
-- 
+- https://appbooks4all.herokuapp.com/api/selectplan (keys:user_id,plan_id,amountpaid,paymentstatus)
+
 
 
