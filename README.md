@@ -10,7 +10,7 @@
 * https://appbooks4all.herokuapp.com/api/rent (keys:user_id,book_id,bookname)
 * https://appbooks4all.herokuapp.com/api/userinfo ( keys:user_id) // 
 userinfo API Returns: 
-{
+> {
     "userplan": [
         {
             "plan_id": 2,
