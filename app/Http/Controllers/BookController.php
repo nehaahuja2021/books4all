@@ -38,6 +38,7 @@ class BookController extends Controller
             return response()->json(['rented_book_data' => $rent->toArray()], 201);
     }
 
+
       }
   
 public function user_info( request $req)
@@ -51,6 +52,22 @@ public function user_info( request $req)
     return response()->json(['userplan' => $userplan->toArray(),'rentedbooksinfo'=> $userbookinfo->toArray()], 201);
     
   }
+
+  public function select_plan(request $req)
+
+  {
+    $userid=$req->user_id;
+    $planid=$req->plan_id;
+    $amount=$req->amountpaid;
+    $userplan= new userplan;
+      $userplan ->user_id=$req->user_id;
+      $userplan->plan_id=$req->plan_id;
+      $userplan->amountpaid=$req->amountpaid;
+      $userplan->paymentstatus=$req->paymentstatus;
+      $userplan->save();
+      return response()->json(['selectedplan' => $userplan->toArray()], 201);
+
+      }
   
 
 }
