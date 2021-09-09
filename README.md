@@ -1,6 +1,6 @@
 
 
-##Books4All APIS
+## Books4All APIS
 
 
 
@@ -44,7 +44,7 @@ userinfo API Returns:
             "dateofissue": "2021-09-08 14:11:05"
         }
     ]
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 
+- 
 
 
